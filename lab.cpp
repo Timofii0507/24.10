@@ -16,7 +16,7 @@ int main() {
             arr[i][j] = rand() % 10;
         }
     }
-    cout << "Елементи масиву:" << endl;
+    cout << "???????? ??????:" << endl;
     for (size_t i = 0; i < row; ++i) {
         for (size_t j = 0; j < col; ++j) {
             cout << arr[i][j] << " ";
@@ -42,9 +42,9 @@ int main() {
             }
         }
     }
-    cout << "Сума елементів: " << sum << endl;
+    cout << "Сума елементів : " << sum << endl;
     cout << "Середнє арифметичне: " << average << endl;
     cout << "Мінімальний елемент: " << minElement << endl;
-    cout << "Максимальний елемент: " << maxElement << endl;
+    cout << "Максимальний елемент:  " << maxElement << endl;
     return 0;
 }
