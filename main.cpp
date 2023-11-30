@@ -6,23 +6,26 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    int n;
-    cout << "Ââåä³òü ÷èñëî: ";
-    cin >> n;
-    int arr[5][5];
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 5; ++j) {
-            if (j == 0) {
-                arr[i][j] = n;
-            }
-            else {
-                arr[i][j] = arr[i][j - 1] * 2;
-            }
+    const int col = 5;
+    const int row = 5;
+    int arr[col][row];
+    int sum_rows[col]{0,0,0,0};
+    int sum_cols[row]{0,0,0,0};
+    int firstElement;
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ  Ð¿ÐµÑ€ÑˆÐµ  Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ð½Ñ: ";
+    cin >> firstElement;
+    for (int i = 0; i < row; i++) 
+    {
+        for (int j = 0; j < col; j++) 
+        {
+            arr[i][j] = firstElement + i + j;
         }
     }
-    cout << "Ñòâîðåíèé ìàñèâ:" << endl;
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 5; ++j) {
+    cout << "Ð¡Ñ‚Ð²Ð¾Ñ€ÐµÐ½Ð¸Ð¹  Ð¼Ð°ÑÐ¸Ð²" << endl;
+    for (int i = 0; i < row; i++) 
+    {
+        for (int j = 0; j < col; j++) 
+        {
             cout << arr[i][j] << " ";
         }
         cout << endl;
