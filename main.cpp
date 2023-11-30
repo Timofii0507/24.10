@@ -9,22 +9,25 @@ int main()
     const int col = 5;
     const int row = 5;
     int arr[col][row];
-    int sum_rows[col]{0,0,0,0};
-    int sum_cols[row]{0,0,0,0};
+    int sum_rows[col]{0,0,0,0,0};
+    int sum_cols[row]{0,0,0,0.0};
     int firstElement;
     cout << "Введіть  перше  значенння: ";
     cin >> firstElement;
-    for (int i = 0; i < row; i++) 
+    for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < col; j++) 
+        for (int j = 0; j < col; j++)
         {
-            arr[i][j] = firstElement + i + j;
+            if (j == 0)
+                arr[i][j] = firstElement;
+            else
+                arr[i][j] = arr[i][j - 1] * 2;
         }
     }
-    cout << "Створений  масив" << endl;
-    for (int i = 0; i < row; i++) 
+    cout << "Створений масив" << endl;
+    for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < col; j++) 
+        for (int j = 0; j < col; j++)
         {
             cout << arr[i][j] << " ";
         }
